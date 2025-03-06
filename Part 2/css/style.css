@@ -1,0 +1,68 @@
+body {
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.navbar-brand img {
+    width: 80px;
+    height: auto;
+    max-width: 100%;
+}
+
+.about_section .row {
+    margin: 0;
+}
+
+.about_section .col-md-6 {
+    padding: 0;
+    display: flex;
+}
+
+.about_section .col-md-6 > div {
+    width: 100%;
+    padding: 20px;
+}
+
+.about_section .col-md-6:last-child {
+    background-color: white; 
+}
+
+.about_section h1 {
+    color: #5e6f3b;
+}
+
+.container h1.text-center {
+    color: #5e6f3b; 
+    text-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white;
+}
+
+.image-container {
+    height: 200px; 
+    overflow: hidden;
+}
+
+.card-img-top.w-100.h-100.object-fit-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-primary {
+    background-color: #5e6f3b;
+    border-color: #5e6f3b;
+}
+
+.btn-primary:hover {
+    background-color: #4d5b30;
+    border-color: #4d5b30;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
