@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Icecream</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+   </head>
+   <body>
+    <header class="bg-light py-3">
+        <div class="container">
+           <nav class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo" style="width: 65px; height: auto;"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                 <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sign.html">Sign In</a></li>
+                    
+                 </ul>
+              </div>
+           </nav>
+        </div>
+     </header>     
+    <div class="master-container">
+        <div class="card cart">
+        <label class="title">Your cart</label>
+        <div class="products">
+            <div class="product">
+                <img src="images/tea-2.jpg" width="60px" height="auto">
+            <div>
+                <span>Green Tea</span>
+                <p>1 Sugar</p>
+            </div>
+            <div class="number-control">
+                <div class="number-left"></div>
+                <input type="number" name="number" class="number-quantity">
+                <div class="number-right"></div>
+            </div>
+            <label class="price small">$9.00</label>
+            </div>
+        </div>
+        </div>
+    
+        <div class="card coupons">
+        <label class="title">Apply coupons</label>
+        <form class="form">
+            <input type="text" placeholder="Apply your coupons here" class="input_field">
+            <a href="#" class="btn btn-secondary">Apply</a>
+        </form>
+        </div>
+    
+        <div class="card checkout">
+        <label class="title">Checkout</label>
+        <div class="details">
+            <span>Your cart subtotal:</span>
+            <span>9.00$</span>
+            <span>Discount through applied coupons:</span>
+            <span>-2.00$</span>
+            <span>Tip:</span>
+            <span>1.00$</span>
+        </div>
+        <div class="checkout--footer">
+            <label class="price"><sup>$</sup>8.00</label>
+            <a href="#" class="btn btn-primary">Checkout</a>
+        </div>
+        </div>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
+</html>
