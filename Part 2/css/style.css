@@ -32,20 +32,6 @@ body {
     color: #5e6f3b;
 }
 
-.leaf-list li {
-    list-style-type: none;
-    background-image: url('../images/tea-leaves.png');
-    background-repeat: no-repeat;
-    background-size: 25px 25px;  /* This is the size of the leaf image */
-    background-position: left top;
-    padding-left: 40px;  /* Space between the bullet and text */
-    margin-bottom: 10px; /* Space between paragraphs */
-}
- 
-.green {
-    font-size: 20px;
-}
-
 .container h1.text-center, .shadow {
     color: #5e6f3b;
     text-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white;
@@ -71,7 +57,15 @@ body {
     height: 100%;
     object-fit: cover;
 }
-
+.leaf-list li {
+    list-style-type: none;
+    background-image: url('../images/tea-leaves.png');
+    background-repeat: no-repeat;
+    background-size: 25px 25px;  /* This is the size of the leaf image */
+    background-position: left top;
+    padding-left: 40px;  /* Space between the bullet and text */
+    margin-bottom: 10px; /* Space between paragraphs */
+}
 .btn-primary {
     background-color: #5e6f3b;
     border-color: #5e6f3b;
@@ -104,6 +98,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
  }
+
 .master-container {
     justify-content: center;
     align-items: center;
@@ -111,7 +106,7 @@ body {
     display: grid;
     grid-template-columns: auto;
     gap: 5px;
-    margin-top: 1%;
+    margin-top: 7.5%;
   }
   
 .red {
@@ -203,7 +198,7 @@ border-radius: 7px;
 }
 
 .coupons form {
-display:grid;
+display: grid;
 grid-template-columns: 1fr 80px;
 gap: 10px;
 padding: 10px;
@@ -229,13 +224,13 @@ background-color: transparent;
 
 .coupons form button {
 display: flex;
-flex-direction: column;
+flex-direction: row;
 justify-content: center;
 align-items: center;
 padding: 10px 18px;
 gap: 10px;
 width: 100%;
-height: 100%;
+height: 36px;
 background: linear-gradient(180deg, #4480FF 0%, #115DFC 50%, #0550ED 100%);
 box-shadow: 0px 0.5px 0.5px #EFEFEF, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
 border-radius: 5px;
@@ -362,36 +357,3 @@ border: 1px solid black;
 background-color: #666666;
 }
 
-.credit-card-info--form {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-.input_container {
-width: flex;
-height: fit-content;
-display: flex;
-flex-direction: column;
-gap: 0px;
-margin-bottom: 12px;
-}
-
-.input_field_credit {
-    width: auto;
-    height: 36px;
-    padding: 0 0 0 0;
-    border-radius: 9px;
-    outline: none;
-    background-color: #F2F2F2;
-    border: 1px solid #e5e5e500;
-    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.input_field_credit:focus {
-border: 1px solid transparent;
-box-shadow: 0px 0px 0px 2px #242424;
-background-color: transparent;
-}
