@@ -91,7 +91,19 @@ body {
     background-color: #5a6268;
     border-color: #545b62;
 }
-
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 0;
+ }
+ .form-block {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+ }
 .master-container {
     justify-content: center;
     align-items: center;
