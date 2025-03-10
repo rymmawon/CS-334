@@ -21,6 +21,7 @@ Part 2 Team Members & Work Allocation:
      - Created Repository
      - Built Home Page
      - Built Contact Page
+     - Created Manager View
 
 2. **Vincent Gnodle**
    - **Contributions:** 
@@ -29,7 +30,6 @@ Part 2 Team Members & Work Allocation:
 
 3. **Zoe Martinez**
    - **Contributions:** 
-     - Created Manager View
 
 4. **Adan Delgado**
    - **Contributions:** 
