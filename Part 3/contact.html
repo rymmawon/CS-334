@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Contact</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+   </head>
+   <body class="d-flex flex-column min-vh-100">
+      <header class="bg-light py-3">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo" style="width: 65px; height: auto;"></a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto gap-3">
+                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                     <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                     <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                     <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+                     <li class="nav-item"><a class="nav-link" href="register.html">Sign Up</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      </header>
+      
+      <main class="flex-shrink-0 flex-grow-1 shadow contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 mr-auto">
+              <h2>Contact Us</h2>
+              <p class="mb-5"></p>
+    
+              <ul class="list-unstyled pl-md-5 mb-5">
+                <li class="d-flex text-black mb-2">
+                  <span class="mr-3"><span class="icon-map"></span></span> 123 Apple St, New York, <br> United States
+                </li>
+                <li class="d-flex text-black mb-2">
+                    <span class="mr-3"><span class="icon-phone"></span></span> <a href="tel:+12122222222">+1 (212) 222 2222</a>
+                </li>
+                <li class="d-flex text-black">
+                    <span class="mr-3"><span class="icon-envelope-o"></span></span> <a href="mailto:green-leaf@grean-leaf.com">green-leaf@grean-leaf.com</a>
+                </li>
+              </ul>
+            </div>
+    
+            <div class="col-md-6">
+              <form class="mb-5" method="post" id="contactForm" name="contactForm">
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <label for="name" class="col-form-label">Name</label>
+                    <input type="text" class="form-control" name="name" id="name">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <label for="email" class="col-form-label">Email</label>
+                    <input type="text" class="form-control" name="email" id="email">
+                  </div>
+                </div>
+    
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <label for="message" class="col-form-label">Message</label>
+                    <textarea class="form-control" name="message" id="message" cols="30" rows="7"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="submit" value="Send Message" class="btn btn-primary">
+                    <span class="submitting"></span>
+                  </div>
+                </div>
+              </form>
+    
+              <div id="form-message-warning mt-4"></div> 
+              <div id="form-message-success">
+                Your message was sent, thank you!
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <footer class="bg-dark text-light text-center py-3 mt-auto w-100">
+        <div class="container">
+           <p>2025 ENMU CS-344 Team: Rymma Won, Vince Gnoodle, Zoe Martinez, Adan Delgado</p>
+        </div>
+     </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
+</html>
