@@ -1,3 +1,4 @@
+
 // Check if the IndexedDB is supported
 if (!window.indexedDB) {
     console.log("Your browsert doesn't support IndexedDB");
@@ -13,8 +14,10 @@ const DB_VERSION = 1;
 let productContainer;
 
 document.addEventListener('DOMContentLoaded', () => {
+    
     productContainer = document.querySelector('.row-cols-1');
     productContainer.innerHTML = '';
+    
     const request = indexedDB.open(DB_NAME, DB_VERSION);
     request.onerror = (event) => {
         console.error('Database error:', event.target.error);
@@ -102,5 +105,9 @@ function displayNoProductsMessage() {
         <p>Please check back later for our tea selection.</p>
     `;
     productContainer.appendChild(messageContainer);
+}
+
+function addToCart(productId){
+    cart.push(productId);
 }
 ;
