@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 sessionStorage.setItem("userLoggedIn", "true");
                 sessionStorage.setItem("userEmail", emailInput);
                 // Redirect the user to the user dashboard (once it is created)
-                window.location.href = "contact.html";
+                window.location.href = "index.html";
             } else {
                 alert("Invalid email or password. Please try again.");
             }
