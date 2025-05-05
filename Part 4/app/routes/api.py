@@ -102,47 +102,6 @@ def delete_product(current_manager, id):
     db.session.commit()
     return jsonify({'message': 'Product deleted successfully'})
 
-#  Public API for items and prices
-@bp.route('/public/items', methods=['GET'])
-def get_public_items():
-    min_price = request.args.get('min_price', type=float)
-    max_price = request.args.get('max_price', type=float)
-    in_stock = request.args.get('in_stock', type=bool)
-    sort_by = request.args.get('sort_by', default='name')
-    sort_order = request.args.get('sort_order', default='asc')
-    
-    query = Product.query
-    if min_price is not None:
-        query = query.filter(Product.price >= min_price)
-    if max_price is not None:
-        query = query.filter(Product.price <= max_price)
-    if in_stock:
-        query = query.filter(Product.stock > 0)
-    if sort_by in ['name', 'price']:
-        if sort_order.lower() == 'desc':
-            query = query.order_by(getattr(Product, sort_by).desc())
-        else:
-            query = query.order_by(getattr(Product, sort_by))
-    
-    products = query.all()
-    # Return JSON
-    return jsonify({
-        'items': [{
-            'id': p.id,
-            'name': p.name,
-            'price': p.price,
-            'in_stock': p.stock > 0,
-            'image_url': p.image_url
-        } for p in products],
-        'total_items': len(products),
-        'filters_applied': {
-            'min_price': min_price,
-            'max_price': max_price,
-            'in_stock': in_stock,
-            'sort_by': sort_by,
-            'sort_order': sort_order
-        }
-    })
 
 # Order Routes
 @bp.route('/orders', methods=['POST'])
