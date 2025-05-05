@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Shopping Cart</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+      <style>
+         .cart.red {
+            background-color: white;
+            width: 100%;
+            padding: 0;
+         }
+         .products {
+            width: 100%;
+         }
+         .product {
+            width: 100%;
+         }
+      </style>
+   </head>
+   <body>
+    <header class="bg-light py-3">
+        <div class="container">
+           <nav class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand" href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" style="width: 65px; height: auto;"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                 <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('main.index') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('main.shop') }}">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('main.cart') }}">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('main.contact') }}">Contact Us</a></li>
+                 </ul>
+              </div>
+           </nav>
+        </div>
+    </header>
+    
+    <div class="container py-4">
+        <h1 class="text-center mb-4">Your Shopping Cart</h1>
+        
+        <div class="row" id="cart-content">
+            <div class="col-lg-8">
+                <div class="card cart red mb-4">
+                    <div class="title p-3 border-bottom">Your Cart Items</div>
+                    <div class="products">
+                        <!-- Products are loaded dynamically -->
+                    </div>
+                    <div class="empty-cart-message text-center py-4" style="display: none;">
+                        <p>Your cart is empty</p>
+                        <a href="{{ url_for('main.shop') }}" class="btn btn-primary mt-2">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="credit-card-info--form coupons card mb-3">
+                    <div class="title">Payment Information</div>
+                    <form id="payment-form" class="payment-form">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="input_container">
+                                    <label for="name_field" class="form-label">Full Name</label>
+                                    <input id="name_field" class="input_field_credit" type="text" name="input-name" placeholder="Enter your full name" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input_container">
+                                    <label for="email_field" class="form-label">Email</label>
+                                    <input id="email_field" class="input_field_credit" type="email" name="input-email" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input_container">
+                                    <label for="credit_field" class="form-label">Card Number</label>
+                                    <input id="credit_field" class="input_field_credit" type="number" name="input-card" placeholder="0000 0000 0000 0000" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input_container">
+                                    <label for="password_expir" class="form-label">Expiry Date</label>
+                                    <input id="password_expir" class="input_field_credit" type="date" name="input-expiry" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input_container">
+                                    <label for="password_field" class="form-label">CVV</label>
+                                    <input id="password_field" class="input_field_credit" type="number" name="cvv" placeholder="CVV" required>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card checkout red">
+                    <div class="title">Order Summary</div>
+                    <div class="details">
+                        <span>Subtotal:</span>
+                        <span>$0.00</span>
+                        <span>Tax (7.125%):</span>
+                        <span>$0.00</span>
+                    </div>
+                    <div class="checkout--footer">
+                        <label class="price"><sup>$</sup>0.00</label>
+                        <button id="checkout-btn" class="btn btn-primary" onclick="submitPayment()">Complete Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <div class="container">
+           <p>2025 ENMU CS-344 Team: Rymma Won, Vince Gnoodle, Zoe Martinez, Adan Delgado</p>
+        </div>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/client.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
+</html>
