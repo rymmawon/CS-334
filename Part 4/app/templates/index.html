@@ -1,1 +1,56 @@
-
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>About</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+   </head>
+   <body>
+      <header class="bg-light py-3">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <a class="navbar-brand" href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" style="width: 65px; height: auto;"></a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto gap-3">
+                     <li class="nav-item"><a class="nav-link active" href="{{ url_for('main.index') }}">Home</a></li>
+                     <li class="nav-item"><a class="nav-link" href="{{ url_for('main.shop') }}">Shop</a></li>
+                     <li class="nav-item"><a class="nav-link" href="{{ url_for('main.cart') }}">Cart</a></li>
+                     <li class="nav-item"><a class="nav-link" href="{{ url_for('main.contact') }}">Contact Us</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      </header>
+<section class="about_section py-5">
+   <div class="container">
+    <div class="row d-flex align-items-stretch">
+        <!-- Home Screen Image -->
+         <div class="col-md-6">
+            <img src="{{ url_for('static', filename='images/about-img.jpg') }}" class="img-fluid h-100 w-100 object-fit-cover" alt="About Green Leaf">
+        </div>
+         <!-- Blurb about us -->
+         <div class="col-md-6">
+            <div class="p-4 bg-white shadow-sm">
+               <h1 class="mb-4">Green Leaf</h1>
+               <p>At Green Leaf Tea Shop, we specialize in a variety of handpicked, high-quality teas from around the world. Whether you're a fan of herbal, black, green, or specialty blends, we offer something to delight every tea lover. Our mission is to bring you the freshest and finest teas, expertly curated to give you an unforgettable tea experience.</p>
+               <p>Each cup of tea we serve is carefully crafted to provide the perfect balance of flavor, aroma, and relaxation. We pride ourselves on sourcing only the best organic and sustainably grown tea leaves, ensuring that every sip is as good for the planet as it is for your well-being.</p>
+               <p>Come visit us and explore our wide selection of premium loose-leaf teas, cozy tea accessories, and delectable snacks. Whether you're new to tea or a seasoned enthusiast, our knowledgeable staff is here to guide you on your tea journey.</p>
+               <a href="{{ url_for('main.shop') }}" class="btn btn-success">Visit Our Shop</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+      <footer class="bg-dark text-light text-center py-3">
+         <div class="container">
+            <p>2025 ENMU CS-344 Team: Rymma Won, Vince Gnoodle, Zoe Martinez, Adan Delgado</p>
+         </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
+</html>
