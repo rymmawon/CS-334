@@ -9,7 +9,19 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 3. 
-python create_manager.py
+pip install flask-migrate
 
 4. 
+python init_db.py
+
+5.
 python run.py
+
+6. 
+http://172.20.10.2:5001 or whatever the server
+
+# for manager:
+http://172.20.10.2:5001/admin/orders 
+
+email: manager@teashop.com
+password: admin123
