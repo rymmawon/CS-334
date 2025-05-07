@@ -1,6 +1,7 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, current_app
 from app import db
 from app.models.models import Product, Order, OrderItem, Manager
+from app.email_utils import send_receipt
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 import jwt
@@ -118,6 +119,11 @@ def create_order():
         product.stock -= item['quantity']
     
     db.session.commit()
+    
+    try:
+        send_receipt(order.email, order)
+    except Exception as e:
+        current_app.logger.error(f"Failed to send receipt for order {order.id}: {e}")
     return jsonify({'message': 'Order created successfully', 'order_id': order.id}), 201
 
 @bp.route('/orders', methods=['GET'])
