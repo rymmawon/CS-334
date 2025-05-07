@@ -25,3 +25,7 @@ http://172.20.10.2:5001/admin/orders
 
 email: manager@teashop.com
 password: admin123
+
+
+# To get Json file:
+curl http://172.20.10.2:5001/api/products > products.json
