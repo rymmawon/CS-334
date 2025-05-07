@@ -24,8 +24,8 @@ Part 4 Team Members & Work Allocation:
 
 2. **Vincent Gnodle**
    - **Contributions:** 
-     - 
-     - 
+     - PWA incorporation
+     - Execution PDF
 
 3. **Adan Delgado**
    - **Contributions:** 
