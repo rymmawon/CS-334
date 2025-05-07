@@ -18,8 +18,8 @@ Part 4 Team Members & Work Allocation:
 --------------------------------
 1. **Rymma Won**
    - **Contributions:** 
-     - 
-     - 
+     - Backend functionality
+     - Database set up
      - 
 
 2. **Vincent Gnodle**
