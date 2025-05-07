@@ -1,0 +1,19 @@
+{
+    "name": "Green Leaf Tea",
+    "short_name": "GreenLeaf",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#5e6f3b",
+    "theme_color": "#36a538",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "app/static/images/logo.png",
+            "type": "image/png", "sizes": "128x128"
+        },
+        {
+            "src": "app/static/images/background.jpg",
+            "type": "image/jpg", "sizes": "512x512"
+        }
+    ]
+}
